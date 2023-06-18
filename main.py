@@ -24,17 +24,32 @@ from pyrogram import Client
 
 goutham="""
 
+░██████╗░░█████╗░██╗░░░██╗████████╗██╗░░██╗░█████╗░
+██╔════╝░██╔══██╗██║░░░██║╚══██╔══╝██║░░██║██╔══██╗
+██║░░██╗░██║░░██║██║░░░██║░░░██║░░░███████║███████║
+██║░░╚██╗██║░░██║██║░░░██║░░░██║░░░██╔══██║██╔══██║
+╚██████╔╝╚█████╔╝╚██████╔╝░░░██║░░░██║░░██║██║░░██║
+░╚═════╝░░╚════╝░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝
+
+░██████╗███████╗██████╗░
+██╔════╝██╔════╝██╔══██╗
+╚█████╗░█████╗░░██████╔╝
+░╚═══██╗██╔══╝░░██╔══██╗
+██████╔╝███████╗██║░░██║
+╚═════╝░╚══════╝╚═╝░░╚═╝
 
 
-Copyright (C) 2021 by HeimanPictures@Github, < https://github.com/GouthamSER >.
+Copyright (C) 2021 by GouthamSER @Github, < https://github.com/GouthamSER >.
 This file is part of dev project,
 and is released under the "MIT License Agreement".
 All rights reserved.
 """
 
 print(goutham)
-api_id = input("Enter Your API ID: \n")
-api_hash = input("Enter Your API HASH : \n")
+api_id = input("Enter Your API ID: ")
+api_hash = input("Enter Your API HASH : ")
+
+get("\n")
 
 with Client("GOutham", api_id=api_id, api_hash=api_hash) as bot_:
     first_name = (bot_.get_me()).first_name
