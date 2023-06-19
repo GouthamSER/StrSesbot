@@ -18,25 +18,34 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
 import pyrogram
 from pyrogram import Client
+import time
+import os
+
+
+print("Starting...")
+time.sleep(1.5)
+
+code=">>>>>>\n"
+x=0
+
+for i in code:
+    x=x+1
+    time.sleep(0.6)
+    print(code[0:x])
+
+
 
 goutham="""
 
-░██████╗░░█████╗░██╗░░░██╗████████╗██╗░░██╗░█████╗░
-██╔════╝░██╔══██╗██║░░░██║╚══██╔══╝██║░░██║██╔══██╗
-██║░░██╗░██║░░██║██║░░░██║░░░██║░░░███████║███████║
-██║░░╚██╗██║░░██║██║░░░██║░░░██║░░░██╔══██║██╔══██║
-╚██████╔╝╚█████╔╝╚██████╔╝░░░██║░░░██║░░██║██║░░██║
-░╚═════╝░░╚════╝░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝
+░██████╗░░█████╗░██╗░░░██╗████████╗██╗░░██╗░█████╗░███╗░░░███╗  ░██████╗███████╗██████╗░
+██╔════╝░██╔══██╗██║░░░██║╚══██╔══╝██║░░██║██╔══██╗████╗░████║  ██╔════╝██╔════╝██╔══██╗
+██║░░██╗░██║░░██║██║░░░██║░░░██║░░░███████║███████║██╔████╔██║  ╚█████╗░█████╗░░██████╔╝
+██║░░╚██╗██║░░██║██║░░░██║░░░██║░░░██╔══██║██╔══██║██║╚██╔╝██║  ░╚═══██╗██╔══╝░░██╔══██╗
+╚██████╔╝╚█████╔╝╚██████╔╝░░░██║░░░██║░░██║██║░░██║██║░╚═╝░██║  ██████╔╝███████╗██║░░██║
+░╚═════╝░░╚════╝░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ╚═════╝░╚══════╝╚═╝░░╚═╝
 
-░██████╗███████╗██████╗░
-██╔════╝██╔════╝██╔══██╗
-╚█████╗░█████╗░░██████╔╝
-░╚═══██╗██╔══╝░░██╔══██╗
-██████╔╝███████╗██║░░██║
-╚═════╝░╚══════╝╚═╝░░╚═╝
 
 
 Copyright (C) 2021 by GouthamSER @Github, < https://github.com/GouthamSER >.
@@ -45,14 +54,28 @@ and is released under the "MIT License Agreement".
 All rights reserved.
 """
 
+
 print(goutham)
-api_id = input("Enter Your API ID: ")
-api_hash = input("Enter Your API HASH : ")
+API_ID=int(input("Enter Your API_ID: "))
+API_HASH=input("Enter Your API_HASH: ")
 
-get("\n")
+print("\n")
 
-with Client("GOutham", api_id=api_id, api_hash=api_hash) as bot_:
-    first_name = (bot_.get_me()).first_name
-    string_session_ = f"<b>String Session For {first_name}</b> \nThanks To @im_goutham_josh \n<code>{bot_.export_session_string()}</code>"
-    bot_.send_message("me", string_session_, parse_mode="html")
-    print(f"String Has Been Sent To Your Saved Message : {first_name}")
+app = Client(
+    "session",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    in_memory=True,
+)
+
+app.start()
+print("\n\n ⚠️⚠️⚠️ PLEASE COPY FROM HERE THE SESSION STRING ⚠️⚠️⚠️")
+
+print("\nSession String:", 
+      app.export_session_string())
+
+print("\n\n")
+
+input("Press ENTER to close...")
+
+os._exit(0)
