@@ -1,13 +1,22 @@
 # String Session Bot In TERMUX
 
-## Installation
+# Installination
 
-pip install git
-pip install python
-git clone https://github.com/GouthamSER/StrSesbot
-pip3 install -r requirements.txt
-cd main.py
+***
 
-After Following This You Will Receive The Pyrogram String Session In Your Saved Message (TG Cloud)
+`pip install git`<BR>
+`pip install python3`<BR>
+`apt upgrade`<BR>
+`apt update`<BR>
+`git clone https://github.com/GouthamSER/StrSesbot`<BR>
+`pip3 install -r requirements.txt`<BR>
+`cd StrSesbot`<BR>
+`python3 main.py`<BR>
 
-#### ALL COPY RIGHT TO GOUTHAM SER
+
+***
+
+####  © All right reseved GouthamSER 🌠
+
+[Thanks To Pyrogram🔧](https://github.com/pyrogram)<BR>
+[Thanks to ME😎](https://github.com/GouthamSER)
