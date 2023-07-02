@@ -4,8 +4,8 @@
 
 ***
 
-`pip install git`<BR>
-`pip install python3`<BR>
+`pkg install git`<BR>
+`pkg install python3`<BR>
 `apt upgrade`<BR>
 `apt update`<BR>
 `git clone https://github.com/GouthamSER/StrSesbot`<BR>
